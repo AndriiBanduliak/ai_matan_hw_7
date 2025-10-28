@@ -1,0 +1,8 @@
+black
+ruff
+isort
+pre-commit
+jupyter
+nbconvert
+nbqa
+nbstripout
