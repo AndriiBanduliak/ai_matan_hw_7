@@ -1,0 +1,34 @@
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+exclude = [".git", ".venv", "venv", "env", "build", "dist", ".mypy_cache", ".pytest_cache", ".ruff_cache"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+known_first_party = []
+
+[tool.ruff]
+line-length = 100
+extend-exclude = [
+  ".git",
+  ".venv",
+  "venv",
+  "env",
+  "build",
+  "dist",
+  ".mypy_cache",
+  ".pytest_cache",
+  ".ruff_cache",
+]
+select = [
+  "E",  # pycodestyle errors
+  "F",  # pyflakes
+  "I",  # isort
+  "B",  # flake8-bugbear
+  "UP", # pyupgrade
+]
+
+[tool.nbqa.addopts]
+black = ["--line-length=100"]
+ruff = []
